@@ -11,9 +11,13 @@ import './App.css';
 class App extends Component {
 
   render() {
+    const title = "Welcome Will!";
+
     return (
       <div className="App">
-        <Header />
+        {/* created a prop, just like you would on a DOM element: You Give It A Prop. */}
+        <Header title={title} />
+        <Header title={"Other title"} />
         <Footer />
       </div>
     );
