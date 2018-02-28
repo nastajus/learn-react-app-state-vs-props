@@ -5,18 +5,30 @@ import Footer from './Footer';
 import './App.css';
 
 /*
+ * Data handling technique #1 : State
+ * +
  * Data handling technique #2 : Props
  */
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      title: "Welcome"
+    };
+  }
+
   render() {
-    const title = "Welcome Will!";
+    setTimeout(() => {
+      this.setState({title: "Welcome Will!"})
+    }, 2000);
 
     return (
       <div className="App">
         {/* created a prop, just like you would on a DOM element: You Give It A Prop. */}
-        <Header title={title} />
+        {/* let's go ahead an pass it in. */}
+        <Header title={this.state.title} />
         <Header title={"Other title"} />
         <Footer />
       </div>
