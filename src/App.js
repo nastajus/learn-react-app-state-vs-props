@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    console.log('constructor');
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          stuff
-        </p>
       </div>
     );
   }
