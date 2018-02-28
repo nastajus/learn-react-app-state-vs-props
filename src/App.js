@@ -2,28 +2,14 @@ import React, {Component} from 'react';
 import './App.css';
 
 /*
- * Data handling technique #1 : State
+ * Data handling technique #2 : Props
  */
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {name: 'Will'};
-    console.log('constructor');
-  }
-
   render() {
-    /* this.state === null;  /// this way by default. */
-    setTimeout(() => {
-      /*
-       * setState({...}) is the ONE method you NEED to know with STATE.
-       */
-      this.setState({name: "Bob"})
-    }, 1000);
     return (
       <div className="App">
-        {this.state.name}
       </div>
     );
   }
